@@ -344,7 +344,7 @@ function start(opts) {
 
   var logDir = path.resolve(opts.directory, 'logs');
   if (!fs.existsSync(logDir)) {
-    mkdir(logDir);
+    fs.mkdir(logDir);
   }
   
   var ls;
@@ -354,7 +354,7 @@ function start(opts) {
     params.push('startId=' + opts.id);
   }
   if (opts.daemon) {
-    ls = spawn(process.execPath, params, {detached: true, stdio: 'ignore'});
+    ls = spawn(process.execPath, params, {detached: true, stdio: 'ignore', windowsHide: true});
     ls.unref();
     console.log(DAEMON_INFO);
     process.exit(0);
@@ -676,6 +676,6 @@ function runServer(server) {
     for(key in server) {
       cmd += util.format(' %s=%s ', key, server[key]);
     }
-    starter.sshrun(cmd, server.host);
+    starter.sshrun(cmd, server.sshHost);
   }
 }

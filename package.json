@@ -1,6 +1,6 @@
 {
   "name": "pomelo",
-  "version": "2.2.6",
+  "version": "1.2.8",
   "homepage": "https://github.com/NetEase/pomelo",
   "repository": {
     "type": "git",
@@ -25,23 +25,25 @@
     "server"
   ],
   "dependencies": {
-    "socket.io": "1.7.2",
-    "async": "0.2.5",
+    "socket.io": "2.0.4",
+    "async": "2.5.0",
     "seq-queue": "0.0.5",
-    "crc": "0.2.0",
-    "cliff": "0.1.8",
-    "mkdirp": "0.3.3",
-    "pomelo-loader": "0.0.6",
-    "pomelo-rpc": "1.0.7",
-    "pomelo-protocol": "0.1.6",
-    "pomelo-admin": "1.0.1",
-    "pomelo-logger": "0.1.7",
-    "pomelo-scheduler": "0.3.9",
-    "ws": "1.1.1",
-    "pomelo-protobuf": "0.4.0",
-    "node-bignumber": "1.2.1",
+    "crc": "3.4.4",
+    "cliff": "0.1.10",
     "commander": "2.0.0",
-    "mqtt": "0.3.9"
+    "mkdirp": "0.5.1",
+    "ws": "3.3.3",
+    "portscanner": "2.1.1",
+    "pomelo-loader": "git+https://github.com/irukandji/pomelo-loader.git",
+    "pomelo-rpc": "git+https://github.com/irukandji/pomelo-rpc.git",
+    "pomelo-protocol": "git+https://github.com/irukandji/pomelo-protocol.git",
+    "pomelo-admin": "git+https://github.com/irukandji/pomelo-admin.git",
+    "pomelo-logger": "git+https://github.com/irukandji/pomelo-logger.git",
+    "pomelo-scheduler": "git+https://github.com/irukandji/pomelo-scheduler.git",
+    "pomelo-protobuf": "git+https://github.com/irukandji/pomelo-protobuf.git",
+    "node-bignumber": "1.2.1",
+    "mqtt": "0.3.9",
+    "toobusy-js": "0.5.1"
   },
   "bin": {
     "pomelo": "./bin/pomelo"
